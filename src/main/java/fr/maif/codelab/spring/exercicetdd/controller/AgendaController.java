@@ -2,15 +2,16 @@ package fr.maif.codelab.spring.exercicetdd.controller;
 
 import fr.maif.codelab.spring.exercicetdd.models.Agenda;
 import fr.maif.codelab.spring.exercicetdd.models.Meeting;
-import fr.maif.codelab.spring.exercicetdd.repositories.AgendaRepository;
 import fr.maif.codelab.spring.exercicetdd.services.AgendaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.UUID;
 
-@Controller
+@RestController
+@ComponentScan(value = {"fr.maif.codelab.spring.exercicetdd.controller"})
 @RequestMapping("/agenda")
 public class AgendaController {
 
